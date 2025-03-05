@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>상품 단일 조회</title>
+</head>
+<body>
+	<%
+		System.out.println(request.getParameter("id"));
+		for(ProductVO product : products){
+	%>
+		<tr>
+			<td><%=product.getID() %></td>
+			<td>
+				<a href="read.jsp?id=<%=product.getId() %>">
+				</a>
+				<%=product.getID() %>
+			</td>
+			<td><%=product.getID() %></td>
+			<td><%=product.getID() %></td>
+		</tr>
+	<%
+	
+	%>
+</body>
+</html>

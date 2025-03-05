@@ -1,0 +1,5 @@
+INDEX VERSION 1.134
+C:\web_0900_yjy\jsp\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1307240968.index
+\servlet\src\main\java
+C:\web_0900_yjy\jsp\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2165350093.index
+\mybatis\src\main\java

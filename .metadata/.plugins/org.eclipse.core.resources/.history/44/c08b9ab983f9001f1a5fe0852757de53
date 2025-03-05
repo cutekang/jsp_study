@@ -1,0 +1,9 @@
+package com.app.vo;
+
+public class ProductVO {
+	Long id;
+	String productName;
+	int productPrice;
+	int productStock;
+	
+}

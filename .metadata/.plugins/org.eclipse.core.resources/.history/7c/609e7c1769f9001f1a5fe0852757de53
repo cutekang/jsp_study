@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!--
+	두 수를 입력 받고, 두 수를 더한 결과값이 홀수인지 짝수인지
+	서블릿을 통해 응답해주는 페이지 구현
+	단, 두 수는 모두 유효성 검사가 필요하다.
+-->
+
+</body>
+</html>
