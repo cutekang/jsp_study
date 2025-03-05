@@ -1,7 +1,0 @@
-package com.app.servlet;
-
-import javax.servlet.http.HttpServlet;
-
-public class Write extends HttpServlet{
-	
-}

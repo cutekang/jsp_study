@@ -1,8 +1,0 @@
-package com.app.dao;
-
-import org.apache.ibatis.session.SqlSession;
-
-public class ProductDAO {
-
-	public SqlSession seqsession;
-}

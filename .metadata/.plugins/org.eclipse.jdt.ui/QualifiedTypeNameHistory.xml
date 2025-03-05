@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="com.app.mybatis.config.MyBatisConfig"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
-    <fullyQualifiedTypeName name="com.app.dao.ProductDAO"/>
-    <fullyQualifiedTypeName name="com.app.vo.ProductVO"/>
-    <fullyQualifiedTypeName name="java.util.Optional"/>
-</qualifiedTypeNameHistroy>
