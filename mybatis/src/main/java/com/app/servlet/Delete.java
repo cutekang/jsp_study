@@ -8,25 +8,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.dao.ProductDAO;
-import com.app.vo.ProductVO;
 
-public class Write extends HttpServlet{
-	
+public class Delete extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
 		resp.setContentType("text/html; charset=utf-8;");
 		
+//		System.out.println(req.getParameter("id"));
 		ProductDAO productDAO = new ProductDAO();
-		ProductVO productVO = new ProductVO();
-		
-		productVO.setId(Long.parseLong(req.getParameter("id")));
-		productVO.setProductName(req.getParameter("productName"));
-		productVO.setProductPrice(Integer.parseInt(req.getParameter("productPrice")));
-		productVO.setProductStock(Integer.parseInt(req.getParameter("productStock")));
-		
-		productDAO.insert(productVO);
+		Long id = Long.parseLong(req.getParameter("id"));
+		productDAO.delete(id);
 	}
 	
 	@Override

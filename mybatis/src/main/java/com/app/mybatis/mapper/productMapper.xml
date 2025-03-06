@@ -18,6 +18,17 @@
 		FROM TBL_PRODUCT
 		WHERE ID = #{id}
 	</select>
+	
+	<update id="update" parameterType="ProductVO">
+		UPDATE TBL_PRODUCT
+		SET PRODUCT_NAME = #{productName}, PRODUCT_PRICE = #{productPrice}, PRODUCT_STOCK = #{productStock}
+		WHERE ID = #{id}
+	</update>
+	
+	<delete id="delete" parameterType="Long">
+		DELETE FROM TBL_PRODUCT
+		WHERE ID = #{id}
+	</delete>
 </mapper>
 
 

@@ -27,6 +27,11 @@ public class ProductDAO {
 		return sqlSession.selectList("product.selectAll");
 	}
 	
+//	최신 상품 아이디 조회
+	public Long selectId() {
+		return sqlSession.selectOne("product.selectId");
+	}
+	
 //	상품 단일 조회
 	public Optional<ProductVO> select(Long id) {
 		return Optional.ofNullable(sqlSession.selectOne("product.select", id));

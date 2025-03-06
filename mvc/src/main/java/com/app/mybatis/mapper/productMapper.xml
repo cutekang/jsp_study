@@ -13,6 +13,16 @@
 		ORDER BY ID ASC
 	</select>
 	
+	<select id="selectId" resultType="Long">
+		SELECT * 
+		FROM(
+			SELECT ID
+			FROM TBL_PRODUCT
+			ORDER BY ID DESC
+		)
+		WHERE ROWNUM = 1
+	</select>
+	
 	<select id="select" parameterType="Long" resultType="ProductVO">
 		SELECT ID, PRODUCT_NAME, PRODUCT_PRICE, PRODUCT_STOCK
 		FROM TBL_PRODUCT

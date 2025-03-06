@@ -10,9 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import com.app.dao.ProductDAO;
 import com.app.vo.ProductVO;
 
-public class Write extends HttpServlet{
-	
-	
+public class Update extends HttpServlet{
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
@@ -26,7 +25,7 @@ public class Write extends HttpServlet{
 		productVO.setProductPrice(Integer.parseInt(req.getParameter("productPrice")));
 		productVO.setProductStock(Integer.parseInt(req.getParameter("productStock")));
 		
-		productDAO.insert(productVO);
+		productDAO.update(productVO);
 	}
 	
 	@Override
