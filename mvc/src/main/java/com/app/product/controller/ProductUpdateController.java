@@ -1,7 +1,6 @@
 package com.app.product.controller;
 
 import java.io.IOException;
-import java.util.Optional;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -11,21 +10,21 @@ import com.app.Action;
 import com.app.Result;
 import com.app.dao.ProductDAO;
 
-public class ProductReadController implements Action {
+public class ProductUpdateController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+		
 		Result result = new Result();
+		ProductDAO productDAO = new ProductDAO();
 		
 		Long id = Long.parseLong(req.getParameter("id"));
 		
-		ProductDAO productDAO = new ProductDAO();
-		
 		req.setAttribute("product", productDAO.select(id).orElseThrow(() -> {
-			throw new RuntimeException("ProductReadController user not found");
+			throw new RuntimeException("ProductUpdateController product not found");
 		}));
 		
-		result.setPath("read.jsp");
+		result.setPath("update.jsp");
 		return result;
 	}
 
