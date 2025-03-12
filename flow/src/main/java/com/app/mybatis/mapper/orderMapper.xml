@@ -6,6 +6,32 @@
 		INSERT INTO TBL_ORDER
 		VALUES(SEQ_ORDER.NEXTVAL, #{memberId}, #{productId}, #{productCount})
 	</insert>
+	
+	<select id="selectAll" parameterType="Long" resultType="OrderDTO">
+		SELECT 
+			TBO.ID, TBO.MEMBER_ID, TBO.PRODUCT_ID, TBO.PRODUCT_COUNT,
+			TBM.MEMBER_EMAIL, TBM.MEMBER_NAME,
+			TBP.PRODUCT_NAME, TBP.PRODUCT_PRICE,
+			TBP.PRODUCT_PRICE * TBO.PRODUCT_COUNT AS TOTAL_PRICE
+		FROM TBL_ORDER TBO
+		JOIN TBL_MEMBER TBM
+		ON TBO.MEMBER_ID = TBM.ID
+		JOIN TBL_PRODUCT TBP 
+		ON TBO.PRODUCT_ID = TBP.ID
+		WHERE TBM.ID = #{id}
+		ORDER BY TBO.ID DESC
+	</select>
+	
+	<select id="selectCountById" parameterType="Long" resultType="int">
+		SELECT PRODUCT_COUNT
+		FROM TBL_ORDER
+		WHERE ID = #{id}
+	</select>
+	
+	<delete id="delete" parameterType="Long">
+		DELETE FROM TBL_ORDER
+		WHERE ID = #{id}
+	</delete>
 </mapper>
 
 

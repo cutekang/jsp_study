@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.apache.ibatis.session.SqlSession;
 
 import com.app.mybatis.config.MyBatisConfig;
+import com.app.vo.OrderVO;
 import com.app.vo.ProductVO;
 
 public class ProductDAO {
@@ -40,6 +41,11 @@ public class ProductDAO {
 //	상품 수정
 	public void update(ProductVO productVO) {
 		sqlSession.update("product.update", productVO);
+	}
+	
+//	상품 재고 수정
+	public void updateStock(OrderVO orderVO) {
+		sqlSession.update("product.updateStock", orderVO);
 	}
 	
 //	상품 삭제

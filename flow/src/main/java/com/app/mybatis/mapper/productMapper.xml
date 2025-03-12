@@ -35,6 +35,12 @@
 		WHERE ID = #{id}
 	</update>
 	
+	<update id="updateStock" parameterType="OrderVO">
+		UPDATE TBL_PRODUCT
+		SET PRODUCT_STOCK = PRODUCT_STOCK - #{productCount}
+		WHERE ID = #{productId}
+	</update>
+	
 	<delete id="delete" parameterType="Long">
 		DELETE FROM TBL_PRODUCT
 		WHERE ID = #{id}
